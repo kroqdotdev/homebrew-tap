@@ -6,26 +6,26 @@
 class Whk < Formula
   desc "CLI for webhooks.cc: capture, inspect, forward and replay webhooks and email"
   homepage "https://webhooks.cc"
-  version "1.9.0"
+  version "1.10.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/kroqdotdev/webhooks-cc/releases/download/v1.9.0/whk-v1.9.0-aarch64-apple-darwin.tar.gz"
-      sha256 "f9fe79adc6fe438beb4bae2b127440b075c05b978402cf863cbc0f20b655fd60"
+      url "https://github.com/kroqdotdev/webhooks-cc/releases/download/v1.10.0/whk-v1.10.0-aarch64-apple-darwin.tar.gz"
+      sha256 "baa53b866b75896123b85d4411d9d44745d86db82ec802ad415bd16deaac3987"
     else
-      url "https://github.com/kroqdotdev/webhooks-cc/releases/download/v1.9.0/whk-v1.9.0-x86_64-apple-darwin.tar.gz"
-      sha256 "ebade81afe6debb925128b8a20ce01f26f006081879447da38a5d52e44f97453"
+      url "https://github.com/kroqdotdev/webhooks-cc/releases/download/v1.10.0/whk-v1.10.0-x86_64-apple-darwin.tar.gz"
+      sha256 "460c569b8698d6a32a0be22c097b0f812f3e6d1bafceb4dc3e312fd7977ce8d3"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kroqdotdev/webhooks-cc/releases/download/v1.9.0/whk-v1.9.0-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "6845950e6dfe648d44c9dd6484593b19b4942687b4a8de917a2dea2955ef7cb2"
+      url "https://github.com/kroqdotdev/webhooks-cc/releases/download/v1.10.0/whk-v1.10.0-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "f24710d3136d3ad8770da0823ea99041b906187b39d46dcc14d69b870e2e992a"
     elsif Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kroqdotdev/webhooks-cc/releases/download/v1.9.0/whk-v1.9.0-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "0ff98b29946fabc6af16ba54b198d165a136d3441b4708c8c0d72aa7b06ce7fe"
+      url "https://github.com/kroqdotdev/webhooks-cc/releases/download/v1.10.0/whk-v1.10.0-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "b3d5810dd38d83fb9e21f352c3a32cc9e505a5ca53c167ddf54e7ec2b022db9d"
     else
       odie "whk has builds for 64-bit Intel and ARM Linux only; see https://webhooks.cc/installation"
     end
